@@ -21,13 +21,17 @@ Ici, un seul zookeeper est set up. En production ,il sera nécessaire d'avoir au
 Je forward les ports depuis 2181 vers 3000.
 Le script 'launch zookeeper.yml' sera a compléter pour lancer plusieurs zookeeper. J'en ai juste lancé un à la main sur un serveur ebn utilisant la commande.
 
-## mesos master
+## mesos master
 
 Par habitude, je lance mesos en utilisant le binaire. Il serait intéressant de voir si le service mesos fonctionne correctement aujourd'hui.
 
 le script 'mesos-master.sh' lance un master mesos sur la machine locale
 
-## mesos slave
+## mesos slave
 
+le script 'mesos-slave.sh' lance les slave mesos, et setup les repéertoires nécessaires.
 
+le script ansible 'kill_mesos_slave.yml' va kill les slaves sur les machines. Ce script est bancal, à charge de l'utilisateur qu'il a bien fonctionné via l'UI du master.
+
+'launch-mesos-slave.yml' lance les slaves mesos sur toutes les machines.
 
