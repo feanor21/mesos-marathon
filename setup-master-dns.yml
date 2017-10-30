@@ -1,0 +1,22 @@
+- hosts: master
+  remote_user: sympo
+  become: true
+  become_method: sudo
+  tasks:
+    - name: copy dns binaries
+      copy:
+        src: /home/sympo/mesos-dns
+        dest: /usr/bin/mesos-dns
+    - name: copy dns startup script
+      copy:
+        src: /home/sympo/launch-dns-standalone.sh
+        dest: /home/sympo/launch-dns-standalone.sh
+        mode: 0777
+    - name: copy dns config
+      copy:
+        src: /home/sympo/sample-config.json
+        dest: /home/sympo/sample-config.json
+
+    - name: start dns service
+      shell: nohup sudo /home/sympo/launch-dns-standalone.sh
+

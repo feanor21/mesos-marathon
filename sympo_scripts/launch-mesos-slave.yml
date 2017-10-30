@@ -1,0 +1,13 @@
+- hosts: sympo
+  remote_user: sympo
+  become: true
+  become_method: sudo
+  tasks:
+    - name:  copy file launch
+      copy: 
+        src: mesos-slave.sh
+        dest: /home/sympo/mesos-slave1.sh
+        mode: 0777
+      ignore_errors: yes
+    - name: launch slave
+      shell: /home/sympo/mesos-slave1.sh

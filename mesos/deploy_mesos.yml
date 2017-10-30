@@ -1,0 +1,16 @@
+- hosts: 
+  - hs_prod
+  remote_user: admin
+  become: true
+  become_method: su
+  tasks:
+    - name: reset old slaves value
+      shell: rm -f /meta/slaves/latest
+    - name: copy  run file
+      copy:
+        src: mesos/launch_mesos-slave.sh
+        dest: /data/mesos
+    - name: launch  mesos slave 
+      shell: bash -c '  /data/mesos/launch_mesos-slave.sh '
+  
+

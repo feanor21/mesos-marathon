@@ -1,0 +1,29 @@
+- hosts: sympo
+  remote_user: sympo
+  become: true
+  become_method: sudo
+  tasks:
+#    - name: kill old sluuuaves
+#      shell:  kill $(ps -auxf |grep mesos|grep slave |cut -f6 -d ' ')
+#      ignore_errors: yes
+
+
+    - name: kill old slaves
+      shell:  kill $(ps -auxf |grep mesos|grep slave |cut -f7 -d ' ')
+      ignore_errors: yes
+
+    - name: kill
+      shell: kill $(ps -auxf |grep mesos|grep slave |cut -f6 -d ' ')
+      ignore_errors: yes
+
+    - name: kill old slaves
+      shell:  kill $(ps -auxf |grep mesos|grep slave |cut -f8 -d ' ')
+      ignore_errors: yes
+
+    - name: kill old slaves
+      shell:  kill $(ps -auxf |grep mesos|grep slave |cut -f5 -d ' ')
+      ignore_errors: yes
+
+    - name: kill old slaves
+      shell:  kill $(ps -auxf |grep mesos|grep slave |cut -f9 -d ' ')
+      ignore_errors: yes

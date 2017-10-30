@@ -1,0 +1,62 @@
+- hosts: 
+  - 192.168.1.14
+  remote_user: admin
+  become: true
+  become_method: su
+  tasks:
+ #   - name: install  docker
+ #     yum:
+ #       name: docker
+ #       state: present
+  
+    - name: create install directory for mesos  
+      file:
+        path : /data/mesos
+        state : directory
+        
+        
+    - name: create directory for mesos slave
+      file:
+        path : /data/mesos/slave
+        state : directory
+        
+    - name: create directory for mesos log
+      file:
+        path : /data/mesos/log
+        state : directory
+
+    - name: copy  run file
+      copy:
+        src: mesos/launch_mesos-slave.sh
+        dest: /data/mesos
+        
+
+    - name: copy  install file
+      copy:
+        src: mesos/mesos-1.1.0-2.0.107.centos701406.x86_64.rpm
+        dest: /data/mesos
+
+
+                
+    - name:  install mesos
+      yum:
+        name: /data/mesos/mesos-1.1.0-2.0.107.centos701406.x86_64.rpm
+        state: present
+        
+    - name:  change right on mesos
+      file:
+        path: /data/mesos/launch_mesos-slave.sh
+        owner: root
+        group: root
+        mode: 0770
+  
+        
+    - name: start docker service
+      service: 
+        name: docker
+        state: started
+    - name: reset old slaves value
+      shell: rm -f /meta/slaves/latest
+        
+      
+      

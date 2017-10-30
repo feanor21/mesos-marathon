@@ -1,0 +1,23 @@
+- hosts: master
+  remote_user: sympo
+  become: true
+  become_method: sudo
+  tasks:
+#    - name: restart docker
+#      service: 
+#        name: docker
+#        state: restarted
+
+#    - name: pull zookeeper
+#      shell: docker pull registry2:5000/zookeeper
+
+#    - name: stop zookeeper
+#      shell: docker stop zookeeper
+#      ignore_errors: yes
+
+#    - name: rm zookeeper
+#      shell: docker rm zookeeper
+#      ignore_errors: yes
+
+    - name: start zookeeper
+      shell: docker run -d -p 2888:2888 -p 3888:3888 -p 3000:2181 --name=zookeeper registry2:5000/zookeeper

@@ -1,0 +1,9 @@
+- hosts: sympo
+  remote_user: sympo
+  become: true
+  become_method: sudo
+  tasks:
+    - name: test connection
+      ping:
+    - name: pull docker image
+      shell: docker pull registry2:5000/docex:dev-0.91 

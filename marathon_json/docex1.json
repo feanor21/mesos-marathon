@@ -1,0 +1,69 @@
+{
+  "id": "/test/test2",
+  "cmd": null,
+  "cpus": 0.5,
+  "mem": 512,
+  "disk": 0,
+  "instances": 1,
+  "acceptedResourceRoles": [
+    "*"
+  ],
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "registry2:5000/docex:dev-0.82_newtess",
+      "network": "HOST",
+      "privileged": false,
+      "parameters": [],
+      "forcePullImage": false
+    }
+  },
+  "env": {
+    "PORT": "11000"
+  },
+  "portDefinitions": [
+    {
+      "port": 11000,
+      "protocol": "tcp",
+      "labels": {}
+    }
+  ],
+  "labels": {}
+}
+
+
+
+{
+  "id": "/test/test1",
+  "cmd": null,
+  "cpus": 0.5,
+  "mem": 512,
+  "disk": 0,
+  "instances": 1,
+  "acceptedResourceRoles": [
+    "*"
+  ],
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "registry2:5000/docex:dev-0.82_newtess",
+      "network": "HOST",
+      "privileged": false,
+      "parameters": [],
+      "forcePullImage": false
+    }
+  },
+  "env": {
+    "PORT": "11000"
+  },
+  "portDefinitions": [
+    {
+      "port": 12000,
+      "protocol": "tcp",
+      "labels": {}
+    }
+  ],
+  "labels": {}
+}

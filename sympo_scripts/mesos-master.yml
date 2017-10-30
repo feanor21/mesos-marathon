@@ -1,0 +1,16 @@
+#!/bin/bash
+#su root -c '
+#mesos-master --work_dir=/data/mesos/master \
+#--log_dir=/root/mesos/log \
+#--quorum=1 \
+#--zk=zk://192.168.2.15:3000,192.168.2.16:3000,192.168.2.17:3000,/mesos \
+#--ip=0.0.0.0 \
+#--cluster=datalab >> /data/mesos/log/master-run.log 2>&1 & '
+
+
+#sudo mesos-master --work_dir=/root/mesos/master \
+#--log_dir=/root/mesos/log \
+#--ip=0.0.0.0 \
+#--cluster=datalab >> /data/mesos/log/master-run.log 2>&1 & 
+
+sudo su root -c ' mesos-master --work_dir=/root/mesos/master --log_dir=/root/mesos/log --ip=0.0.0.0 --cluster=datalab >> /data/mesos/log/master-run.log 2>&1 & '

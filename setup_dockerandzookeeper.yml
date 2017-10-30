@@ -1,0 +1,19 @@
+- hosts: sympo
+  remote_user: sympo
+  become: true
+  become_method: sudo
+  tasks:
+    - name: add registry2 to etc hosts
+      shell: echo '192.168.2.11  registry2' >> /etc/hosts
+    - name: copy daemon.json
+      copy:
+        src: /etc/docker/daemon.json
+        dest: /etc/docker/daemon.json
+    - name: restart docker
+      service: 
+        name: docker
+        state: restarted
+#    - name: pull from registry
+#      shell: docker pull 
+#        name: docker
+#        state: restarted

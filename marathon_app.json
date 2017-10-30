@@ -1,0 +1,670 @@
+{
+    "apps": [
+        {
+            "acceptedResourceRoles": [
+                "*"
+            ],
+            "args": null,
+            "backoffFactor": 1.15,
+            "backoffSeconds": 1,
+            "cmd": null,
+            "constraints": [],
+            "container": {
+                "docker": {
+                    "forcePullImage": false,
+                    "image": "registry2:5000/docex:dev-0.82_newtess",
+                    "network": "HOST",
+                    "parameters": [],
+                    "portMappings": [],
+                    "privileged": false
+                },
+                "type": "DOCKER",
+                "volumes": []
+            },
+            "cpus": 3,
+            "dependencies": [],
+            "deployments": [],
+            "disk": 0,
+            "env": {
+                "PORT": "8888"
+            },
+            "executor": "",
+            "fetch": [],
+            "gpus": 0,
+            "healthChecks": [],
+            "id": "/docexapin4",
+            "instances": 1,
+            "ipAddress": null,
+            "killSelection": "YOUNGEST_FIRST",
+            "labels": {},
+            "maxLaunchDelaySeconds": 3600,
+            "mem": 12000,
+            "portDefinitions": [
+                {
+                    "labels": {},
+                    "port": 10000,
+                    "protocol": "tcp"
+                }
+            ],
+            "ports": [
+                10000
+            ],
+            "readinessChecks": [],
+            "requirePorts": false,
+            "residency": null,
+            "secrets": {},
+            "storeUrls": [],
+            "taskKillGracePeriodSeconds": null,
+            "tasksHealthy": 0,
+            "tasksRunning": 1,
+            "tasksStaged": 0,
+            "tasksUnhealthy": 0,
+            "unreachableStrategy": {
+                "expungeAfterSeconds": 600,
+                "inactiveAfterSeconds": 300
+            },
+            "upgradeStrategy": {
+                "maximumOverCapacity": 1,
+                "minimumHealthCapacity": 1
+            },
+            "uris": [],
+            "user": null,
+            "version": "2017-10-26T09:11:12.876Z",
+            "versionInfo": {
+                "lastConfigChangeAt": "2017-10-26T09:11:12.876Z",
+                "lastScalingAt": "2017-10-26T09:11:12.876Z"
+            }
+        },
+        {
+            "args": null,
+            "backoffFactor": 1.15,
+            "backoffSeconds": 1,
+            "cmd": "sudo  /usr/bin/mesos-dns -config=/home/sympo/sample-config.json",
+            "constraints": [
+                [
+                    "hostname",
+                    "CLUSTER",
+                    "192.168.2.12"
+                ]
+            ],
+            "container": null,
+            "cpus": 0.5,
+            "dependencies": [],
+            "deployments": [],
+            "disk": 0,
+            "env": {},
+            "executor": "",
+            "fetch": [],
+            "gpus": 0,
+            "healthChecks": [],
+            "id": "/mesos-dns",
+            "instances": 0,
+            "ipAddress": null,
+            "killSelection": "YOUNGEST_FIRST",
+            "labels": {},
+            "maxLaunchDelaySeconds": 3600,
+            "mem": 1024,
+            "portDefinitions": [
+                {
+                    "labels": {},
+                    "name": "default",
+                    "port": 10001,
+                    "protocol": "tcp"
+                }
+            ],
+            "ports": [
+                10001
+            ],
+            "readinessChecks": [],
+            "requirePorts": false,
+            "residency": null,
+            "secrets": {},
+            "storeUrls": [],
+            "taskKillGracePeriodSeconds": null,
+            "tasksHealthy": 0,
+            "tasksRunning": 0,
+            "tasksStaged": 0,
+            "tasksUnhealthy": 0,
+            "unreachableStrategy": {
+                "expungeAfterSeconds": 600,
+                "inactiveAfterSeconds": 300
+            },
+            "upgradeStrategy": {
+                "maximumOverCapacity": 1,
+                "minimumHealthCapacity": 1
+            },
+            "uris": [],
+            "user": null,
+            "version": "2017-10-26T07:50:56.838Z",
+            "versionInfo": {
+                "lastConfigChangeAt": "2017-10-26T07:49:06.328Z",
+                "lastScalingAt": "2017-10-26T07:50:56.838Z"
+            }
+        },
+        {
+            "acceptedResourceRoles": [
+                "*"
+            ],
+            "args": null,
+            "backoffFactor": 1.15,
+            "backoffSeconds": 1,
+            "cmd": null,
+            "constraints": [],
+            "container": {
+                "docker": {
+                    "forcePullImage": false,
+                    "image": "registry2:5000/docex:dev-0.81",
+                    "network": "HOST",
+                    "parameters": [],
+                    "portMappings": [],
+                    "privileged": false
+                },
+                "type": "DOCKER",
+                "volumes": []
+            },
+            "cpus": 3,
+            "dependencies": [],
+            "deployments": [],
+            "disk": 0,
+            "env": {
+                "PORT": "8888"
+            },
+            "executor": "",
+            "fetch": [],
+            "gpus": 0,
+            "healthChecks": [],
+            "id": "/docexapi-old-tesseract",
+            "instances": 0,
+            "ipAddress": null,
+            "killSelection": "YOUNGEST_FIRST",
+            "labels": {},
+            "maxLaunchDelaySeconds": 3600,
+            "mem": 12000,
+            "portDefinitions": [
+                {
+                    "labels": {},
+                    "port": 10000,
+                    "protocol": "tcp"
+                }
+            ],
+            "ports": [
+                10000
+            ],
+            "readinessChecks": [],
+            "requirePorts": false,
+            "residency": null,
+            "secrets": {},
+            "storeUrls": [],
+            "taskKillGracePeriodSeconds": null,
+            "tasksHealthy": 0,
+            "tasksRunning": 0,
+            "tasksStaged": 0,
+            "tasksUnhealthy": 0,
+            "unreachableStrategy": {
+                "expungeAfterSeconds": 600,
+                "inactiveAfterSeconds": 300
+            },
+            "upgradeStrategy": {
+                "maximumOverCapacity": 1,
+                "minimumHealthCapacity": 1
+            },
+            "uris": [],
+            "user": null,
+            "version": "2017-10-26T08:51:42.693Z",
+            "versionInfo": {
+                "lastConfigChangeAt": "2017-10-26T06:41:33.575Z",
+                "lastScalingAt": "2017-10-26T08:51:42.693Z"
+            }
+        },
+        {
+            "acceptedResourceRoles": [
+                "*"
+            ],
+            "args": null,
+            "backoffFactor": 1.15,
+            "backoffSeconds": 1,
+            "cmd": null,
+            "constraints": [],
+            "container": {
+                "docker": {
+                    "forcePullImage": false,
+                    "image": "registry2:5000/docex:dev-0.82_newtess",
+                    "network": "HOST",
+                    "parameters": [],
+                    "portMappings": [],
+                    "privileged": false
+                },
+                "type": "DOCKER",
+                "volumes": []
+            },
+            "cpus": 3,
+            "dependencies": [],
+            "deployments": [],
+            "disk": 0,
+            "env": {
+                "PORT": "8888"
+            },
+            "executor": "",
+            "fetch": [],
+            "gpus": 0,
+            "healthChecks": [],
+            "id": "/docexapin5",
+            "instances": 1,
+            "ipAddress": null,
+            "killSelection": "YOUNGEST_FIRST",
+            "labels": {},
+            "maxLaunchDelaySeconds": 3600,
+            "mem": 12000,
+            "portDefinitions": [
+                {
+                    "labels": {},
+                    "port": 10000,
+                    "protocol": "tcp"
+                }
+            ],
+            "ports": [
+                10000
+            ],
+            "readinessChecks": [],
+            "requirePorts": false,
+            "residency": null,
+            "secrets": {},
+            "storeUrls": [],
+            "taskKillGracePeriodSeconds": null,
+            "tasksHealthy": 0,
+            "tasksRunning": 1,
+            "tasksStaged": 0,
+            "tasksUnhealthy": 0,
+            "unreachableStrategy": {
+                "expungeAfterSeconds": 600,
+                "inactiveAfterSeconds": 300
+            },
+            "upgradeStrategy": {
+                "maximumOverCapacity": 1,
+                "minimumHealthCapacity": 1
+            },
+            "uris": [],
+            "user": null,
+            "version": "2017-10-26T09:11:22.083Z",
+            "versionInfo": {
+                "lastConfigChangeAt": "2017-10-26T09:11:22.083Z",
+                "lastScalingAt": "2017-10-26T09:11:22.083Z"
+            }
+        },
+        {
+            "acceptedResourceRoles": [
+                "*"
+            ],
+            "args": null,
+            "backoffFactor": 1.15,
+            "backoffSeconds": 1,
+            "cmd": null,
+            "constraints": [],
+            "container": {
+                "docker": {
+                    "forcePullImage": false,
+                    "image": "registry2:5000/docex:dev-0.81",
+                    "network": "HOST",
+                    "parameters": [],
+                    "portMappings": [],
+                    "privileged": false
+                },
+                "type": "DOCKER",
+                "volumes": []
+            },
+            "cpus": 3,
+            "dependencies": [],
+            "deployments": [],
+            "disk": 0,
+            "env": {
+                "PORT": "8888"
+            },
+            "executor": "",
+            "fetch": [],
+            "gpus": 0,
+            "healthChecks": [],
+            "id": "/docexapi",
+            "instances": 1,
+            "ipAddress": null,
+            "killSelection": "YOUNGEST_FIRST",
+            "labels": {},
+            "maxLaunchDelaySeconds": 3600,
+            "mem": 3000,
+            "portDefinitions": [
+                {
+                    "labels": {},
+                    "port": 10000,
+                    "protocol": "tcp"
+                }
+            ],
+            "ports": [
+                10000
+            ],
+            "readinessChecks": [],
+            "requirePorts": false,
+            "residency": null,
+            "secrets": {},
+            "storeUrls": [],
+            "taskKillGracePeriodSeconds": null,
+            "tasksHealthy": 0,
+            "tasksRunning": 1,
+            "tasksStaged": 0,
+            "tasksUnhealthy": 0,
+            "unreachableStrategy": {
+                "expungeAfterSeconds": 600,
+                "inactiveAfterSeconds": 300
+            },
+            "upgradeStrategy": {
+                "maximumOverCapacity": 1,
+                "minimumHealthCapacity": 1
+            },
+            "uris": [],
+            "user": null,
+            "version": "2017-10-26T08:52:59.319Z",
+            "versionInfo": {
+                "lastConfigChangeAt": "2017-10-26T08:17:47.422Z",
+                "lastScalingAt": "2017-10-26T08:52:59.319Z"
+            }
+        },
+        {
+            "acceptedResourceRoles": [
+                "*"
+            ],
+            "args": null,
+            "backoffFactor": 1.15,
+            "backoffSeconds": 1,
+            "cmd": null,
+            "constraints": [],
+            "container": {
+                "docker": {
+                    "forcePullImage": false,
+                    "image": "registry2:5000/docex:dev-0.82_newtess",
+                    "network": "HOST",
+                    "parameters": [],
+                    "portMappings": [],
+                    "privileged": false
+                },
+                "type": "DOCKER",
+                "volumes": []
+            },
+            "cpus": 3,
+            "dependencies": [],
+            "deployments": [],
+            "disk": 0,
+            "env": {
+                "PORT": "8888"
+            },
+            "executor": "",
+            "fetch": [],
+            "gpus": 0,
+            "healthChecks": [],
+            "id": "/docexapin1",
+            "instances": 1,
+            "ipAddress": null,
+            "killSelection": "YOUNGEST_FIRST",
+            "labels": {},
+            "maxLaunchDelaySeconds": 3600,
+            "mem": 12000,
+            "portDefinitions": [
+                {
+                    "labels": {},
+                    "port": 10000,
+                    "protocol": "tcp"
+                }
+            ],
+            "ports": [
+                10000
+            ],
+            "readinessChecks": [],
+            "requirePorts": false,
+            "residency": null,
+            "secrets": {},
+            "storeUrls": [],
+            "taskKillGracePeriodSeconds": null,
+            "tasksHealthy": 0,
+            "tasksRunning": 1,
+            "tasksStaged": 0,
+            "tasksUnhealthy": 0,
+            "unreachableStrategy": {
+                "expungeAfterSeconds": 600,
+                "inactiveAfterSeconds": 300
+            },
+            "upgradeStrategy": {
+                "maximumOverCapacity": 1,
+                "minimumHealthCapacity": 1
+            },
+            "uris": [],
+            "user": null,
+            "version": "2017-10-26T09:10:33.762Z",
+            "versionInfo": {
+                "lastConfigChangeAt": "2017-10-26T09:10:33.762Z",
+                "lastScalingAt": "2017-10-26T09:10:33.762Z"
+            }
+        },
+        {
+            "acceptedResourceRoles": [
+                "*"
+            ],
+            "args": null,
+            "backoffFactor": 1.15,
+            "backoffSeconds": 1,
+            "cmd": null,
+            "constraints": [],
+            "container": {
+                "docker": {
+                    "forcePullImage": false,
+                    "image": "registry2:5000/docex:dev-0.82_newtess",
+                    "network": "HOST",
+                    "parameters": [],
+                    "portMappings": [],
+                    "privileged": false
+                },
+                "type": "DOCKER",
+                "volumes": []
+            },
+            "cpus": 3,
+            "dependencies": [],
+            "deployments": [],
+            "disk": 0,
+            "env": {
+                "PORT": "8888"
+            },
+            "executor": "",
+            "fetch": [],
+            "gpus": 0,
+            "healthChecks": [],
+            "id": "/docexapin3",
+            "instances": 1,
+            "ipAddress": null,
+            "killSelection": "YOUNGEST_FIRST",
+            "labels": {},
+            "maxLaunchDelaySeconds": 3600,
+            "mem": 12000,
+            "portDefinitions": [
+                {
+                    "labels": {},
+                    "port": 10000,
+                    "protocol": "tcp"
+                }
+            ],
+            "ports": [
+                10000
+            ],
+            "readinessChecks": [],
+            "requirePorts": false,
+            "residency": null,
+            "secrets": {},
+            "storeUrls": [],
+            "taskKillGracePeriodSeconds": null,
+            "tasksHealthy": 0,
+            "tasksRunning": 1,
+            "tasksStaged": 0,
+            "tasksUnhealthy": 0,
+            "unreachableStrategy": {
+                "expungeAfterSeconds": 600,
+                "inactiveAfterSeconds": 300
+            },
+            "upgradeStrategy": {
+                "maximumOverCapacity": 1,
+                "minimumHealthCapacity": 1
+            },
+            "uris": [],
+            "user": null,
+            "version": "2017-10-26T09:11:03.092Z",
+            "versionInfo": {
+                "lastConfigChangeAt": "2017-10-26T09:11:03.092Z",
+                "lastScalingAt": "2017-10-26T09:11:03.092Z"
+            }
+        },
+        {
+            "acceptedResourceRoles": [
+                "*"
+            ],
+            "args": null,
+            "backoffFactor": 1.15,
+            "backoffSeconds": 1,
+            "cmd": null,
+            "constraints": [],
+            "container": {
+                "docker": {
+                    "forcePullImage": false,
+                    "image": "registry2:5000/docex:dev-0.82_newtess",
+                    "network": "HOST",
+                    "parameters": [],
+                    "portMappings": [],
+                    "privileged": false
+                },
+                "type": "DOCKER",
+                "volumes": []
+            },
+            "cpus": 3,
+            "dependencies": [],
+            "deployments": [],
+            "disk": 0,
+            "env": {
+                "PORT": "8888"
+            },
+            "executor": "",
+            "fetch": [],
+            "gpus": 0,
+            "healthChecks": [],
+            "id": "/docexapi-new-tesseract",
+            "instances": 0,
+            "ipAddress": null,
+            "killSelection": "YOUNGEST_FIRST",
+            "labels": {},
+            "maxLaunchDelaySeconds": 3600,
+            "mem": 12000,
+            "portDefinitions": [
+                {
+                    "labels": {},
+                    "port": 10000,
+                    "protocol": "tcp"
+                }
+            ],
+            "ports": [
+                10000
+            ],
+            "readinessChecks": [],
+            "requirePorts": false,
+            "residency": null,
+            "secrets": {},
+            "storeUrls": [],
+            "taskKillGracePeriodSeconds": null,
+            "tasksHealthy": 0,
+            "tasksRunning": 0,
+            "tasksStaged": 0,
+            "tasksUnhealthy": 0,
+            "unreachableStrategy": {
+                "expungeAfterSeconds": 600,
+                "inactiveAfterSeconds": 300
+            },
+            "upgradeStrategy": {
+                "maximumOverCapacity": 1,
+                "minimumHealthCapacity": 1
+            },
+            "uris": [],
+            "user": null,
+            "version": "2017-10-26T09:11:32.389Z",
+            "versionInfo": {
+                "lastConfigChangeAt": "2017-10-26T06:51:03.722Z",
+                "lastScalingAt": "2017-10-26T09:11:32.389Z"
+            }
+        },
+        {
+            "acceptedResourceRoles": [
+                "*"
+            ],
+            "args": null,
+            "backoffFactor": 1.15,
+            "backoffSeconds": 1,
+            "cmd": null,
+            "constraints": [],
+            "container": {
+                "docker": {
+                    "forcePullImage": false,
+                    "image": "registry2:5000/docex:dev-0.82_newtess",
+                    "network": "HOST",
+                    "parameters": [],
+                    "portMappings": [],
+                    "privileged": false
+                },
+                "type": "DOCKER",
+                "volumes": []
+            },
+            "cpus": 3,
+            "dependencies": [],
+            "deployments": [],
+            "disk": 0,
+            "env": {
+                "PORT": "8888"
+            },
+            "executor": "",
+            "fetch": [],
+            "gpus": 0,
+            "healthChecks": [],
+            "id": "/docexapin2",
+            "instances": 1,
+            "ipAddress": null,
+            "killSelection": "YOUNGEST_FIRST",
+            "labels": {},
+            "maxLaunchDelaySeconds": 3600,
+            "mem": 12000,
+            "portDefinitions": [
+                {
+                    "labels": {},
+                    "port": 10000,
+                    "protocol": "tcp"
+                }
+            ],
+            "ports": [
+                10000
+            ],
+            "readinessChecks": [],
+            "requirePorts": false,
+            "residency": null,
+            "secrets": {},
+            "storeUrls": [],
+            "taskKillGracePeriodSeconds": null,
+            "tasksHealthy": 0,
+            "tasksRunning": 1,
+            "tasksStaged": 0,
+            "tasksUnhealthy": 0,
+            "unreachableStrategy": {
+                "expungeAfterSeconds": 600,
+                "inactiveAfterSeconds": 300
+            },
+            "upgradeStrategy": {
+                "maximumOverCapacity": 1,
+                "minimumHealthCapacity": 1
+            },
+            "uris": [],
+            "user": null,
+            "version": "2017-10-26T09:10:53.391Z",
+            "versionInfo": {
+                "lastConfigChangeAt": "2017-10-26T09:10:53.391Z",
+                "lastScalingAt": "2017-10-26T09:10:53.391Z"
+            }
+        }
+    ]
+}

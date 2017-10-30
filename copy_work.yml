@@ -1,0 +1,9 @@
+- hosts: sympo
+  remote_user: sympo
+#  become: true
+#  become_method: sudo
+  tasks:
+    - name: copy all files to slaves
+      copy: 
+        src: /home/sympo/sympo_scripts
+        dest: /home/sympo/sympo_scripts
