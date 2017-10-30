@@ -1,5 +1,5 @@
 # sympo-mesos_marathon
- ##Intro 
+ ## Intro 
  
  on this repo, there is the scripts used to setup a cluster with mesos / marathon , in order to expose a dockerised API on a pull of machine.
  
