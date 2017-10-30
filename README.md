@@ -35,3 +35,9 @@ le script ansible 'kill_mesos_slave.yml' va kill les slaves sur les machines. Ce
 
 'launch-mesos-slave.yml' lance les slaves mesos sur toutes les machines.
 
+## mesos dns
+
+J'ai suivi la doc officielle. Le container docker n'as pas bien marché. J'ai du modifier resolv.conf pour faire fonctionner le dns. Cela m'as provoqué de l'instabilité sur le lancement des slaves et du master. 
+
+Afin d'éviter ce souci, je suis retourné en arriére sans dns. Un peut de temps sera nécessaire pour tout vérifier.
+
