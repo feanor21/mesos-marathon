@@ -4,3 +4,8 @@
  on this repo, there is the scripts used to setup a cluster with mesos / marathon , in order to expose a dockerised API on a pull of machine.
  
  The machine are standart ubuntu PC. We use a wifi router to set up a local network. each machine have a static IP.
+ 
+ ## Installation des machines
+ 
+ Dans le dossier install, le script 'setup.sh' installe les paquets pour mesos, marathon, curl, ansible.
+ L'utilisateur utilisé ici s'appelle "sympo". Il dispose des droits sudo sans mot de pass (sur toutes les machines).
